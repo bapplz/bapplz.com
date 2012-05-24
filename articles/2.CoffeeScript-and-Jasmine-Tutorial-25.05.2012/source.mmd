@@ -1,0 +1,76 @@
+#CoffeeScript
+
+[CoffeeScript][1] is a cool little language that can bring a lot of fun for you!  
+It is mature enough to be used in your code and if something goes wrong you can
+always edit the JavaScript output!
+
+[1]: http://coffeescript.org/ "CoffeeScript"
+
+#Jasmine
+
+Nowadays, there are lots of options for testing your client side code. 
+[Jasmine][2] is simple and BDD framework build by [Pivotal][3].  
+It can be used in Rails, Node, Maven or standalone. We will use the latter way.
+
+[2]: http://pivotal.github.com/jasmine/ "Jasmine"
+[3]: http://pivotallabs.com/ "Pivotal"
+
+#Relieving the pain
+
+Getting all the fluffy details right can be quite cumbersome.  
+So we will use a simple [boilerplate][4] to kickstart the project
+
+[4]: https://github.com/bapplz/coffeescript-boilerplate "CoffeeScript Boilerplate"
+
+#Making it work
+
+Clone the repo, go to the dir and run bundle
+
+[bash]
+git clone git://github.com/bapplz/coffeescript-boilerplate.git
+cd coffeescript-boilerplate
+bundle install
+[/bash]
+
+Change the README file.
+
+##Guard a secret ingriedient
+
+This project has a little gem included - [Guard][5].  
+Go to the terminal and run
+
+[bash]
+bundle exec guard
+[/bash]
+
+Now install the appropriate [extension][6] for your browser and connect to the server.
+
+##Running Jasmine
+
+Fire up new terminal window and run
+
+[bash]
+rake jasmine
+[/bash]
+
+Go to [http://localhost:8888/][7] and see the specs running!
+
+[5]: https://github.com/guard/guard "Guard Repo"
+[6]: http://help.livereload.com/kb/general-use/browser-extensions "Guard Browser Extensions"
+[7]: http://localhost:8888/ "Jasmine Server Address"
+
+#Finish line
+
+Congratulation, you are done!
+Now you can see **src/coffeescripts/Hello.js.coffee** and   
+**spec/coffeescripts/Hello_spec.js.coffee** for starting examples.  
+Now go ahead and like or dislike us in the comments :) 
+
+#Additional Resources
+[Jasmine guide](https://github.com/pivotal/jasmine/wiki "Jasmine guide")  
+[Guard Livereload](https://github.com/guard/guard-livereload "Guard Livereload")  
+[Mocha Testing Framework](http://visionmedia.github.com/mocha/ "Mocha Testing Framework")
+
+
+
+

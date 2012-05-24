@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Install MultiMarkDown on Ubuntu</title>
+	<meta name="author" content="Venelin Valkov"/>
+	<meta name="date" content="24.05.2012"/>
+</head>
+<body>
+
+<p><a href="http://fletcherpenney.net/multimarkdown/" title="MultiMarkdown Official website">MultiMarkdown</a>, or MMD,
+is a superset of <a href="http://daringfireball.net/projects/markdown/" title="Markdown Official website">Markdown</a>.<br/>
+It brings new features to the table (including tables too!). It has <em>tons of new output options</em> too!</p>
+
+<h1 id="writeoncereadeverywhere">Write once, read everywhere</h1>
+
+<p>After just a couple of minutes, that will be possible!</p>
+
+<h1 id="install">Install</h1>
+
+<h2 id="preparation">Preparation</h2>
+
+<p>Currently, you have to compile from the source.<br/>
+That makes doing it within Ubuntu a bit tricky.</p>
+
+<p>Let&#8217;s get this party started! Fire up a terminal and do a </p>
+
+<p>[bash]
+sudo apt-get install git-core build-essential libglib2.0-dev
+[/bash]</p>
+
+<h2 id="therealdeal">The real deal</h2>
+
+<p>Now go to a dir that you want to install it in and do a simple</p>
+
+<p>[bash]
+git clone &#8211;recursive git://github.com/fletcher/peg-multimarkdown.git
+cd peg-multimarkdown
+make
+[/bash]</p>
+
+<p>Congratulations! You have installed MultiMarkdown, well.. kinda.</p>
+
+<h2 id="doingitnicer">Doing it nicer</h2>
+
+<p>Simply typing multimarkdown in the terminal won&#8217;t do a thing right now.
+So let&#8217;s add it the da Path.</p>
+
+<p>[bash]
+gedit ~/.bashrc
+[/bash]</p>
+
+<p>Go the end and add the following <em>replace /your/path/here with the actual MultiMarkdown path</em></p>
+
+<p>[bash]
+export PATH=/your/path/here:$PATH
+[/bash]</p>
+
+<p>Save and close it.<br/>
+Go to the terminal and do a </p>
+
+<p>[bash]
+. ~/.bashrc
+[/bash]</p>
+
+<p>Try the following:</p>
+
+<p>[bash]
+multimarkdown -v
+[/bash]</p>
+
+<p>Wohoo! You should see the version and all the good stuff!</p>
+
+<h1 id="usingit">Using it</h1>
+
+<p>Go grab the <a href="https://www.dropbox.com/s/1t92d1twcp7siid/sample-multimarkdown.txt" title="sample MultiMarkdown file">sample MultiMarkdown file</a> and do the following in the terminal
+[bash]
+multimarkdown -b sample-multimarkdown.txt
+[/bash]</p>
+
+<p>Now open the newly created file <em>sample-multimarkdown.html</em> in your favorite browser!</p>
+
+<h1 id="finish">Finish</h1>
+
+<h3 id="goodjobyoudidit">Good job, you did it!</h3>
+
+<p>You have running MultiMarkdown in Ubuntu
+Now go ahead and like or dislike us in the comments :)</p>
+
+<h1 id="additionalresources">Additional resources</h1>
+
+<p><a href="http://daringfireball.net/projects/markdown/syntax," title="Markdown syntax">Markdown syntax guide</a><br/>
+<a href="https://github.com/fletcher/peg-multimarkdown/wiki/How-do-I-create-a-MultiMarkdown-document%3F," title="MultiMarkdown guide">MultiMarkdown guide</a><br/>
+<a href="https://github.com/fletcher/peg-multimarkdown," title="MultiMarkdown on GitHub">MultiMarkdown on GitHub</a> </p>
+
+</body>
+</html>

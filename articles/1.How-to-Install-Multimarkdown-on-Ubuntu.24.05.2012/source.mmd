@@ -1,0 +1,89 @@
+Title:  Install MultiMarkDown on Ubuntu
+Author: Venelin Valkov
+Date:   24.05.2012
+
+# What is MultiMarkdown
+
+[MultiMarkdown](http://fletcherpenney.net/multimarkdown/ "MultiMarkdown Official website"), or MMD, 
+is a superset of [Markdown](http://daringfireball.net/projects/markdown/ "Markdown Official website").   
+It brings new features to the table (including tables too!). It has *tons of new output options* too!
+
+# Write once, read everywhere
+
+After just a couple of minutes, that will be possible!
+
+# Install
+
+## Preparation
+
+Currently, you have to compile from the source.   
+That makes doing it within Ubuntu a bit tricky.
+
+Let's get this party started! Fire up a terminal and do a 
+
+[bash]
+sudo apt-get install git-core build-essential libglib2.0-dev
+[/bash]
+
+## The real deal
+
+Now go to a dir that you want to install it in and do a simple
+
+[bash]
+git clone --recursive git://github.com/fletcher/peg-multimarkdown.git
+cd peg-multimarkdown
+make
+[/bash]
+
+Congratulations! You have installed MultiMarkdown, well.. kinda.
+
+## Doing it nicer
+
+Simply typing multimarkdown in the terminal won't do a thing right now.
+So let's add it the da Path.
+
+[bash]
+gedit ~/.bashrc
+[/bash]
+
+Go the end and add the following *replace /your/path/here with the actual MultiMarkdown path*
+
+[bash]
+export PATH=/your/path/here:$PATH
+[/bash]
+
+Save and close it.  
+Go to the terminal and do a 
+
+[bash]
+. ~/.bashrc
+[/bash]
+
+Try the following:
+
+[bash]
+multimarkdown -v
+[/bash]
+
+Wohoo! You should see the version and all the good stuff!
+
+# Using it
+
+Go grab the [sample MultiMarkdown file](https://www.dropbox.com/s/1t92d1twcp7siid/sample-multimarkdown.txt "sample MultiMarkdown file") and do the following in the terminal
+[bash]
+multimarkdown -b sample-multimarkdown.txt
+[/bash]
+
+Now open the newly created file *sample-multimarkdown.html* in your favorite browser!
+
+# Finish
+
+### Good job, you did it!  
+
+You have running MultiMarkdown in Ubuntu
+Now go ahead and like or dislike us in the comments :)
+
+# Additional resources
+[Markdown syntax guide](http://daringfireball.net/projects/markdown/syntax "Markdown syntax")  
+[MultiMarkdown guide](https://github.com/fletcher/peg-multimarkdown/wiki/How-do-I-create-a-MultiMarkdown-document? "MultiMarkdown guide")  
+[MultiMarkdown on GitHub](https://github.com/fletcher/peg-multimarkdown "MultiMarkdown on GitHub")  

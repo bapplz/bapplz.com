@@ -1,0 +1,7 @@
+Title:  Sample MultiMarkdown file for: Install MultiMarkDown on Ubuntu
+Author: Venelin Valkov
+Date:   24.05.2012
+
+#MultiMarkdown
+
+Welcome to the world of MultiMarkdown!

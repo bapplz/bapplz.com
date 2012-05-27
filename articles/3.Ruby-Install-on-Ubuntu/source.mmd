@@ -1,0 +1,79 @@
+Running [Ruby][1] on your machine can solve a lot of programming/scripting problems.
+It is fun, easy to learn and a real pleasure to use. If you're using
+something heavy such as *Java* or *C#* you will get a lot of smiles
+along with a lots of brains.
+
+[1]: http://www.ruby-lang.org/en/ "Ruby Official Page"
+
+# Get this party started
+
+A word for the *experts*: We are going to use [RVM][2].
+
+[2]: https://rvm.io/ "RVM Official Page"
+
+### Getting the essential stuff
+
+Let's install git, and curl
+
+[bash]
+sudo apt-get install build-essential git-core curl
+[/bash]
+
+### Install RVM
+
+Run this
+
+[bash]
+curl -L get.rvm.io | bash -s stable
+[/bash]
+
+After the download is complete
+[bash]
+source ~/.rvm/scripts/rvm
+[/bash]
+
+### Installing requirements
+
+You can use RVM as is but some glitches may stand your way.
+Other things are helpful in several situations.
+So you need to install the requirements
+
+[bash]
+sudo apt-get -y install openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+[/bash]
+
+I know, it is a long one. Take your time and look through it or
+just execute it
+
+### Ruby 1.9.3 coming UP!
+
+Now that the fluffy details are out of the way a simple
+
+[bash]
+rvm install 1.9.3
+[/bash]
+
+will get you the latest Ruby version.
+
+It is normal to do a lot of processing, be calm.
+
+After the job is done do a 
+
+[bash]
+rvm use --default 1.9.3
+ruby -v
+[/bash]
+
+You are done!
+
+# Finish
+
+Now that you are done, go ahead and try it out! You can be impressed by how much
+Ruby you can learn in 3-4 hours practice!
+
+# Where to learn
+[Ruby learning](http://rubylearning.com/ "Ruby learning")
+[Ruby Official Quickstart](http://www.ruby-lang.org/en/documentation/quickstart/ "Ruby Official Quickstart")
+[Ruby the Hard Way](http://ruby.learncodethehardway.org/ "Ruby the Hard Way")
+[Ruby Koans](http://rubykoans.com/ "Ruby Koans")
+

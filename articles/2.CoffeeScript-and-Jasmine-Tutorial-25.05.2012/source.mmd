@@ -59,6 +59,21 @@ Go to [http://localhost:8888/][7] and see the specs running!
 [6]: http://help.livereload.com/kb/general-use/browser-extensions "Guard Browser Extensions"
 [7]: http://localhost:8888/ "Jasmine Server Address"
 
+##Edit: Building your library
+
+CoffeeScript concatenation and minifying is a must for a JS library.
+That's not as easy as it should be but [guard-sprockets gem][8] can help.
+It wasn't working with minifying though. So we fork and modified it.
+
+When you decide on the name of your shiny new library, just go and change
+**src/javascripts/your-lib.js** name, along with 
+[ruby]
+watch (/^src\/javascripts\/.+\.js$/){ |m| "build/your-lib.js" }
+[/ruby]
+in the **Guardfile** with the same name as well.
+
+[8]: https://github.com/pferdefleisch/guard-sprockets "Guard Sprockets gem"
+
 #Finish line
 
 Congratulation, you are done!

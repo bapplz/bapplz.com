@@ -1,0 +1,101 @@
+**If you don't have Ruby installed on your Ubuntu box follow this [How to install Ruby on Ubuntu][1]**
+
+[1]: http://www.bapplz.com/ubuntu/ruby-install-on-ubuntu-the-right-way/ "How to install Ruby on Ubuntu"
+
+Ruby on Rails or simply Rails is a full stack web application framework.
+It is developed and maintained by the some of the best developers in the world!
+It is real gem, carefully crafted using Ruby.
+
+# Are we ready?
+
+Installing Rails is not difficult since it has since it is really just a gem.
+What a gem though...
+
+Make sure that you have sqlite3 installed, something like
+
+[bash]
+sqlite3
+[/bash]
+
+in the terminal should do the trick
+
+# Actually do install Ruby on Rails
+
+Let's get busy with it
+
+## Install
+
+Make sure you have proper Ruby version running by doing
+
+[bash]
+ruby -v
+[/bash]
+
+1.9.3 is preferred.
+
+Run in your terminal
+
+[bash]
+gem install rails
+[/bash]
+
+and grab a cup of water with lemon.
+Still waiting... I know.
+
+## Testing the installation
+
+Yup, the force is on your side! You have done something really cool!
+
+**If your rails executable is not found visit [this][2] for a solution**
+
+[2]: https://rvm.io/integration/gnome-terminal/ "Rails not executing solution"
+
+Now let's make your baby running!
+Go to your projects dir and do a
+
+[bash]
+rails new my_project
+[/bash]
+
+Now I know that you are anxious but hold it for a second.
+You have to select a JS runtime. [The Ruby Racer][3] is not a bad choice, so lets go for it.
+
+[3]: https://github.com/cowboyd/therubyracer "The Ruby Racer on Github"
+
+Now do a 
+
+[bash]
+cd my_project
+gedit Gemfile
+[/bash]
+
+and make sure to enable the ruby racer gem.
+
+Now do a 
+[bash]
+bundle install
+[/bash]
+
+## Running not scared
+
+Now, drums please, run this
+
+[bash]
+bundle exec rails s
+[/bash]
+
+and visit [http://localhost:3000/](http://localhost:3000/ "http://localhost:3000/") .
+
+# You achieved something today!
+
+And it is a good thing! Enjoy the results!
+Would you like me to teach you how to use Rails?
+Comment and hate down below.
+
+# Knowledge on Rails
+[Rails Guides](http://guides.rubyonrails.org/ "Rails Guides")
+[Learn Rails - the Zombie way](http://railsforzombies.org/ "Learn Rails - the Zombie way")
+[Tips for Learning Rails](http://net.tutsplus.com/tutorials/ruby/the-best-way-to-learn-ruby-on-rails/ "Tips for Learning Rails")
+[Mix of Cool Guides](http://railsguides.net/ "Mix of Cool Guides")
+
+Do you know others?

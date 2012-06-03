@@ -1,0 +1,67 @@
+[MongoDB][1] is great NoSQL database that is designed with performance and scalability in mind. 
+Having fun time using it is the nicest thing about it, though!
+
+[1]: http://www.mongodb.org/ "MongoDB Official Page"
+
+# Can you run it?
+
+MongoDB runs great on Ubuntu! (Runs great on other platforms as well)
+We will use it as a development database. For supported drivers take a look [here][2]
+
+[2]: http://www.mongodb.org/display/DOCS/Drivers "MongoDB Drivers"
+
+# Ready, fire, aim
+
+Let's do this
+
+## Adding the repo
+
+To install the latest and greatest stable release of MongoDB you will have to
+do some crazy stuff.
+
+Run this in your terminal (adds GPG key)
+
+[bash]
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+[/bash]
+
+At the end of your **/etc/apt/sources.list** file add
+
+[bash]
+deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+[/bash]
+
+Save it and then do in the terminal
+
+[bash]
+sudo apt-get update && sudo apt-get install mongodb-10gen
+[/bash]
+
+After all the fluffiness is done do a simple
+
+[bash]
+mongod --version
+[/bash]
+
+And you should see:
+
+## Note about configurations
+
+To Configure those packages beyond defaults take a look at the [official docs][3]
+
+[3]:http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages "MongoDB packages configuration"
+
+# You made it - once again!
+
+Wasn't that nice? Quick and easily you have one of the greatest piece of shiny new software installed - MongoDB :)
+And remember - superuse it, and have fun while doing it! 
+
+Is it time to throw out MySQL?
+
+# Mongo Knowledge 
+[MongoDB Docs](http://www.mongodb.org/display/DOCS/Home "MongoDB Docs")
+[Try MongoDB in the Browser](http://try.mongodb.org/ "Try MongoDB in the Browser")
+[Mongoid - awesome ODM gem for Ruby](http://mongoid.org/en/mongoid/index.html "Mongoid - awesome ODM gem for Ruby")
+[The Little MongoDB Book and other COOL stuff](http://mongly.com/ "The Little MongoDB Book and other COOL stuff")
+
+Cheers!
